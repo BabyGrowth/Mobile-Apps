@@ -1,0 +1,10 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <!-- Base application theme. -->
+    <style name="Base.Theme.BabyGrowth" parent="Theme.MaterialComponents.DayNight.NoActionBar">
+        <item name="colorSecondary">@color/color_transparant</item>
+        <item name="colorSecondaryVariant">@color/color_btn_signin</item>
+        <item name="colorOnSecondary">@color/black</item>
+
+    </style>
+    <style name="Theme.BabyGrowth" parent="Base.Theme.BabyGrowth" />
+</resources>

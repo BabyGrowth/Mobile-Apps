@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".ui.home.HomeFragment">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="90dp"
+        android:orientation="horizontal"
+        android:layout_gravity="center|top"
+        tools:ignore="MissingConstraints">
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/image_view_home"
+            android:layout_width="55dp"
+            android:layout_height="55dp"
+            android:layout_marginStart="30dp"
+            android:layout_marginTop="20dp"
+            tools:src="@tools:sample/avatars" />
+        <ImageButton
+            android:id="@+id/notif_button"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:background="@null"
+            android:layout_gravity="center"
+            android:src="@drawable/ic_notif"
+            android:layout_marginStart="250dp"/>
+    </LinearLayout>
+</FrameLayout>

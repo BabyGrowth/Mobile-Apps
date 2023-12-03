@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+
+    <color name="bg_color">#F9F3CC</color>
+    <color name="color_bottom_bar">#68A7AD</color>
+    <color name="color_signin">#E0AF83</color>
+    <color name="color_signup">#DEC9DE</color>
+    <color name="color_rectangle_signin">#B0DCC0</color>
+    <color name="color_rectangle_signup">#FDBB4D</color>
+    <color name="color_btn_signin">#F59E0B</color>
+    <color name="color_btn_signup">#F8603F</color>
+    <color name="color_transparant">#B4424242</color>
+</resources>

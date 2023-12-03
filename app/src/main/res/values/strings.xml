@@ -1,0 +1,47 @@
+<resources>
+    <string name="app_name">BabyGrowth+</string>
+
+    <string name="signin_title">SIGN IN</string>
+    <string name="signup_title">SIGN UP</string>
+    <string name="profile_title">Profile</string>
+    <string name="history_title">History</string>
+    <string name="meal_plan_title">Meal Plan</string>
+
+    <string name="signin_btn">Sign In</string>
+    <string name="signup_btn">Sign Up</string>
+    <string name="google_btn">Google</string>
+
+    //String Authentication
+    <string name="nama_user">Nama</string>
+    <string name="email_user">Email</string>
+    <string name="password_user">Password</string>
+    <string name="or">OR</string>
+    <string name="email_invalid">Invalid email</string>
+    <string name="password_invalid">Password must be at least 8 characters</string>
+
+    //String History
+    <string name="date_history">Date,</string>
+    <string name="time_history">Time</string>
+    <string name="item_title_history">Nama Makanan</string>
+
+    //String Profile
+    <string name="nama_user_profile">Nama User</string>
+    <string name="nama_anak_txt">Nama Anak</string>
+    <string name="edit_profile_btn">Edit Profile</string>
+    <string name="profile_anak_btn">Profile Anak</string>
+    <string name="about_us_btn">About Us</string>
+    <string name="sign_out_btn">Sign Out</string>
+
+    //String Meal Plan
+    <string name="title_meal_plan">Meal Plan</string>
+    <string name="title_day">Hari</string>
+
+    //String Notifikasi
+    <string name="title_bar_notif">Notifikasi</string>
+    <string name="title_notif">Judul Notifikasi</string>
+    <string name="time_notif">Time Notif</string>
+    <string name="short_desc_notif">Deskripsi Singkat Notif</string>
+    <string name="view_notif">View</string>
+
+    <string name="hello_blank_fragment">Halo</string>
+</resources>
