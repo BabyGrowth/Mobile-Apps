@@ -12,4 +12,5 @@
     <color name="color_btn_signin">#F59E0B</color>
     <color name="color_btn_signup">#F8603F</color>
     <color name="color_transparant">#B4424242</color>
+    <color name="color_saved">#16A34A</color>
 </resources>

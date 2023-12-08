@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingTop="20dp"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <ImageView
+        android:id="@+id/image_view_artikel"
+        android:layout_width="190dp"
+        android:layout_height="100dp"
+        android:layout_marginStart="30dp"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:ignore="MissingConstraints"
+        tools:src="@tools:sample/avatars"/>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_gravity="center"
+        app:layout_constraintStart_toEndOf="@id/image_view_artikel"
+        tools:ignore="MissingConstraints">
+        <TextView
+            android:id="@+id/title_artikel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/artikel_title"
+            android:textColor="@color/black"
+            android:textSize="16dp"
+            android:layout_marginStart="20dp"
+            android:fontFamily="@font/dm_sans_bold"
+            tools:ignore="MissingConstraints"
+            android:contentDescription="Judul Artikel"/>
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginStart="20dp"
+            tools:ignore="MissingConstraints">
+            <TextView
+                android:id="@+id/desc_artikel"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:text="@string/artikel_desc"
+                android:fontFamily="@font/dm_sans_light"
+                android:textColor="@color/black"
+                android:textSize="13dp"
+                android:contentDescription="Tanggal"/>
+        </LinearLayout>
+    </LinearLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

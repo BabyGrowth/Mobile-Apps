@@ -19,6 +19,15 @@
     <string name="email_invalid">Invalid email</string>
     <string name="password_invalid">Password must be at least 8 characters</string>
 
+    //String Home
+    <string name="welcome_txt">Welcome, </string>
+    <string name="nama_user_view_home">Nama</string>
+    <string name="quest_view_home">What did your son eat today?</string>
+    <string name="view_more_txt_button">View More</string>
+    <string name="artikel_home_txt">Artikel</string>
+    <string name="artikel_title">Judul Artikel</string>
+    <string name="artikel_desc">Deskripsi Singkat Artikel</string>
+
     //String History
     <string name="date_history">Date,</string>
     <string name="time_history">Time</string>
@@ -31,6 +40,45 @@
     <string name="profile_anak_btn">Profile Anak</string>
     <string name="about_us_btn">About Us</string>
     <string name="sign_out_btn">Sign Out</string>
+
+    //String Edit Profile
+    <string name="edit_profile_title_bar">Edit Profile</string>
+    <string name="edit_profile_kamera">Kamera</string>
+    <string name="edit_profile_gallery">Gallery</string>
+    <string name="edit_profile_name">Full Name</string>
+    <string name="edit_profile_gender">Jenis Kelamin</string>
+    <string name="opsi_gender">Select Gender</string>
+    <string name="edit_profile_password">Change Password</string>
+    <string name="edit_private_info">Private Information</string>
+    <string name="edit_profile_cant_change">Can\'t be changed</string>
+    <string name="edit_profile_saved">Simpan</string>
+
+    //String Edit Profile Anak
+    <string name="profile_anak_title_bar">Profile Anak</string>
+    <string name="add_profile_anak_title_bar">Add Profile Anak</string>
+    <string name="place_anak">Tempat Lahir</string>
+    <string name="weight_anak">Berat Badan (Kg)</string>
+    <string name="height_anak">Tinggi Badan (Cm)</string>
+    <string name="tanggal_anak">Tanggal Lahir Anak</string>
+
+    //String About
+    <string name="about_title_bar">About Us</string>
+    <string name="selamat_datang_txt">Selamat Datang di</string>
+    <string name="about_us_title">Tentang Kami</string>
+    <string name="content_about_us_txt">BabyGrowth+ didirikan dengan tujuan memberikan panduan yang mudah diakses dan relevan untuk para orang tua yang ingin memberikan yang terbaik bagi pertumbuhan anak - anak mereka. Kami memahami betapa pentingnya perawatan dan gizi yang baik pada masa - masa awal kehidupan untuk mencegah stunting dan menciptakan fondasi kesehatan yang kuat.</string>
+    <string name="misi_title">Misi Kami</string>
+    <string name="content_misi_txt">Misi kami adalah menjadi mitra terpercaya bagi orang tua dalam memahami, mengelola dan meningkatkan aspek - aspek penting gizi dan nutrisi untuk bayi. Kami berkomitmen untuk menyajikan informasi yang terverifikasi secara ilmiah, rencana makan sehat yang dapat diikuti, dan alat pemantauan perkembangan untuk mendukung perjalanan kesehatan bayi Anda.</string>
+    <string name="penawaran_title">Apa yang kami tawarkan?</string>
+    <string name="number_one">1</string>
+    <string name="panduan_title">Panduan Terkini :</string>
+    <string name="content_panduan_txt">Informasi gizi bayi yang terkini dan relevan</string>
+    <string name="number_two">2</string>
+    <string name="plan_title">Rencana Makan Sehat :</string>
+    <string name="content_plan_txt">Rencana makan yang disesuaikan dengan usia bayi</string>
+    <string name="number_three">3</string>
+    <string name="deteksi_title">Alat Pendeteksi :</string>
+    <string name="content_deteksi_txt">Fasilitas pendeteksi gizi dan nutrisi yang dihasilkan dari makanan yang diberikan kepada bayi.</string>
+    <string name="content_close_txt">Dengan BabyGrowth+, kami berharap dapat menjadi kompas Anda dalam perjalanan penting merawat dan memberikan gizi yang dibutuhkan untuk menginspirasi pertumbuhan optimal dan kebahagiaan anak - anak Anda. Terima kasih telah memilih kami sebagai mitra dalam perjalanan kesehatan keluarga Anda.</string>
 
     //String Meal Plan
     <string name="title_meal_plan">Meal Plan</string>

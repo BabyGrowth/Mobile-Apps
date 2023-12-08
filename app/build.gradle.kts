@@ -10,7 +10,7 @@ android {
 
     defaultConfig {
         applicationId = "com.cp.babygrowth"
-        minSdk = 27
+        minSdk = 26
         targetSdk = 33
         versionCode = 1
         versionName = "1.0"
@@ -69,5 +69,5 @@ dependencies {
     implementation("androidx.camera:camera-lifecycle:1.3.0")
     implementation("androidx.camera:camera-view:1.3.0")
 
-
+    implementation("com.github.bumptech.glide:glide:4.16.0")
 }

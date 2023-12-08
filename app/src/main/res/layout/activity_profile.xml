@@ -5,7 +5,7 @@
     android:layout_height="match_parent"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:background="@color/bg_color"
-    tools:context=".ui.profile.ProfileFragment">
+    tools:context=".ui.profile.ProfileActivity">
 
     <TextView
         android:id="@+id/profile_top_title"
@@ -24,7 +24,7 @@
         android:id="@+id/image_view_user"
         android:layout_width="130dp"
         android:layout_height="130dp"
-        android:layout_marginTop="70dp"
+        android:layout_marginTop="0dp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@id/profile_top_title"
@@ -47,7 +47,7 @@
         android:id="@+id/container_opsi_profile"
         android:layout_width="330dp"
         android:layout_height="270dp"
-        android:layout_marginTop="30dp"
+        android:layout_marginTop="90dp"
         android:src="@drawable/rectangle_profile"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -56,15 +56,12 @@
 
     <LinearLayout
         android:id="@+id/container_opsi_edit_profile"
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
         android:gravity="center_horizontal"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/nama_user_view"
-        android:layout_marginTop="50dp"
-        tools:ignore="MissingConstraints">
+        android:layout_gravity="center|top"
+        android:layout_marginTop="340dp">
         <ImageView
             android:id="@+id/editProfileIcon"
             android:layout_width="35dp"
@@ -95,14 +92,12 @@
 
     <LinearLayout
         android:id="@+id/container_opsi_profile_anak"
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/container_opsi_edit_profile"
         android:gravity="center_horizontal"
-        android:layout_marginTop="5dp">
+        android:layout_gravity="center|top"
+        android:layout_marginTop="390dp">
         <ImageView
             android:id="@+id/profile_anak_icon"
             android:layout_width="35dp"
@@ -133,15 +128,12 @@
 
     <LinearLayout
         android:id="@+id/container_opsi_informasi"
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
         android:gravity="center_horizontal"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/container_opsi_profile_anak"
-        android:layout_marginTop="5dp"
-        tools:ignore="MissingConstraints">
+        android:layout_gravity="center|top"
+        android:layout_marginTop="440dp">
         <ImageView
             android:id="@+id/informasi_icon"
             android:layout_width="35dp"
@@ -170,17 +162,22 @@
             android:layout_gravity="center"/>
     </LinearLayout>
 
-    <TextView
-        android:layout_width="wrap_content"
+    <LinearLayout
+        android:id="@+id/container_sign_out"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="@string/sign_out_btn"
-        android:textColor="@color/black"
-        android:padding="15dp"
-        android:textSize="14dp"
-        android:fontFamily="@font/dm_sans_bold"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/container_opsi_informasi"
-        android:layout_marginTop="35dp"/>
-
+        android:orientation="horizontal"
+        android:gravity="center_horizontal"
+        android:layout_gravity="center|top"
+        android:layout_marginTop="530dp">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/sign_out_btn"
+            android:textColor="@color/black"
+            android:padding="15dp"
+            android:textSize="14dp"
+            android:fontFamily="@font/dm_sans_bold"
+            android:layout_gravity="center|top"/>
+    </LinearLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>

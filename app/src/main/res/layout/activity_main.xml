@@ -23,7 +23,7 @@
         android:layout_width="match_parent"
         android:layout_height="60dp"
         android:layout_gravity="bottom"
-        android:background="@color/white"
+        android:backgroundTint="@color/color_bottom_bar"
         app:fabCradleMargin="10dp"
         app:fabCradleRoundedCornerRadius="50dp">
 
@@ -43,6 +43,7 @@
         android:layout_height="wrap_content"
         android:src="@drawable/ic_scan"
         app:layout_anchor="@id/bottomAppBar"
+        android:backgroundTint="@color/color_rectangle_signup"
         app:maxImageSize="30dp"
         android:id="@+id/fab" />
 
