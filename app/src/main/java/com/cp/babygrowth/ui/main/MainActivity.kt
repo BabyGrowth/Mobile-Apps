@@ -1,7 +1,13 @@
 package com.cp.babygrowth.ui.main
 
+import android.Manifest
+import android.content.pm.PackageManager
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.util.Log
+import android.widget.Toast
+import androidx.activity.result.contract.ActivityResultContracts
+import androidx.core.content.ContextCompat
 import androidx.fragment.app.Fragment
 import com.cp.babygrowth.R
 import com.cp.babygrowth.databinding.ActivityMainBinding
@@ -28,11 +34,23 @@ class MainActivity : AppCompatActivity() {
                 R.id.profile -> replaceFragment(ProfileFragment())
                 R.id.meal_plan -> replaceFragment(MealFragment())
 
+                R.id.fab_scan ->
+                    if (allPermissionsGranted()) {
+                        Log.e("MainActivity", "Launching camera intent")
+                        launcherIntentCamera.launch(null)
+                    } else {
+                        requestPermissionLauncher.launch(REQUIRED_PERMISSION)
+                    }
+
                 else ->{
 
                 }
             }
             true
+        }
+
+        if (!allPermissionsGranted()) {
+            requestPermissionLauncher.launch(REQUIRED_PERMISSION)
         }
     }
 
@@ -42,5 +60,33 @@ class MainActivity : AppCompatActivity() {
         val fragmentTransaction = fragmentManager.beginTransaction()
         fragmentTransaction.replace(R.id.frame_activity,fragment)
         fragmentTransaction.commit()
+    }
+
+    private val requestPermissionLauncher =
+        registerForActivityResult(
+            ActivityResultContracts.RequestPermission()
+        ) { isGranted: Boolean ->
+            if (isGranted) {
+                Toast.makeText(this, "Permission request granted", Toast.LENGTH_LONG).show()
+            } else {
+                Toast.makeText(this, "Permission request denied", Toast.LENGTH_LONG).show()
+            }
+        }
+
+    private fun allPermissionsGranted() =
+        ContextCompat.checkSelfPermission(
+            this,
+            REQUIRED_PERMISSION
+        ) == PackageManager.PERMISSION_GRANTED
+
+    private val launcherIntentCamera = registerForActivityResult(
+        ActivityResultContracts.TakePicture()
+    ) { isSuccess ->
+        if (isSuccess) {
+        }
+    }
+
+    companion object {
+        private const val REQUIRED_PERMISSION = Manifest.permission.CAMERA
     }
 }

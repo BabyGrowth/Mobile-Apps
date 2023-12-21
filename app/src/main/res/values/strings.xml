@@ -51,6 +51,7 @@
     <string name="edit_profile_password">Change Password</string>
     <string name="edit_private_info">Private Information</string>
     <string name="edit_profile_cant_change">Can\'t be changed</string>
+    <string name="edit_profile_saved">Simpan</string>
     <string name="add_profile_saved">Tambahkan</string>
 
     //String Edit Profile Anak
