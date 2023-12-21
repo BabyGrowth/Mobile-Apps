@@ -1,11 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/profileConstraintLayout"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:background="@color/bg_color"
-    tools:context=".ui.profile.ProfileActivity">
+    tools:context=".ui.profile.ProfileFragment">
 
     <TextView
         android:id="@+id/profile_top_title"
@@ -15,16 +16,16 @@
         android:textColor="@color/black"
         android:textSize="24dp"
         android:layout_marginTop="28dp"
-        android:fontFamily="@font/dm_sans_bold"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent"
+        android:fontFamily="@font/dm_sans_bold"
         tools:ignore="MissingConstraints" />
     <de.hdodenhof.circleimageview.CircleImageView
         android:id="@+id/image_view_user"
         android:layout_width="130dp"
         android:layout_height="130dp"
-        android:layout_marginTop="0dp"
+        android:layout_marginTop="50dp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@id/profile_top_title"
@@ -47,7 +48,7 @@
         android:id="@+id/container_opsi_profile"
         android:layout_width="330dp"
         android:layout_height="270dp"
-        android:layout_marginTop="90dp"
+        android:layout_marginTop="40dp"
         android:src="@drawable/rectangle_profile"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -61,7 +62,9 @@
         android:orientation="horizontal"
         android:gravity="center_horizontal"
         android:layout_gravity="center|top"
-        android:layout_marginTop="340dp">
+        android:layout_marginTop="60dp"
+        app:layout_constraintTop_toBottomOf="@id/nama_user_view"
+        tools:ignore="MissingConstraints">
         <ImageView
             android:id="@+id/editProfileIcon"
             android:layout_width="35dp"
@@ -97,7 +100,9 @@
         android:orientation="horizontal"
         android:gravity="center_horizontal"
         android:layout_gravity="center|top"
-        android:layout_marginTop="390dp">
+        android:layout_marginTop="5dp"
+        app:layout_constraintTop_toBottomOf="@id/container_opsi_edit_profile"
+        tools:ignore="MissingConstraints">
         <ImageView
             android:id="@+id/profile_anak_icon"
             android:layout_width="35dp"
@@ -133,7 +138,9 @@
         android:orientation="horizontal"
         android:gravity="center_horizontal"
         android:layout_gravity="center|top"
-        android:layout_marginTop="440dp">
+        android:layout_marginTop="5dp"
+        app:layout_constraintTop_toBottomOf="@id/container_opsi_profile_anak"
+        tools:ignore="MissingConstraints">
         <ImageView
             android:id="@+id/informasi_icon"
             android:layout_width="35dp"
@@ -169,7 +176,9 @@
         android:orientation="horizontal"
         android:gravity="center_horizontal"
         android:layout_gravity="center|top"
-        android:layout_marginTop="530dp">
+        android:layout_marginTop="30dp"
+        app:layout_constraintTop_toBottomOf="@id/container_opsi_informasi"
+        tools:ignore="MissingConstraints">
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"

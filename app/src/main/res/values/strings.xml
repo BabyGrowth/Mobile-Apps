@@ -51,7 +51,7 @@
     <string name="edit_profile_password">Change Password</string>
     <string name="edit_private_info">Private Information</string>
     <string name="edit_profile_cant_change">Can\'t be changed</string>
-    <string name="edit_profile_saved">Simpan</string>
+    <string name="add_profile_saved">Tambahkan</string>
 
     //String Edit Profile Anak
     <string name="profile_anak_title_bar">Profile Anak</string>
@@ -59,7 +59,25 @@
     <string name="place_anak">Tempat Lahir</string>
     <string name="weight_anak">Berat Badan (Kg)</string>
     <string name="height_anak">Tinggi Badan (Cm)</string>
-    <string name="tanggal_anak">Tanggal Lahir Anak</string>
+    <string name="tanggal_anak">Tanggal Lahir</string>
+    <string name="male">Laki-Laki</string>
+    <string name="female">Perempuan</string>
+
+    //String Detail Profile Anak
+    <string name="detail_profile_anak_title_bar">Detail Profile Anak</string>
+    <string name="nama_detail">Nama : </string>
+    <string name="nama_anak_detail">Nama Anak </string>
+    <string name="tempat_detail">Tempat Lahir : </string>
+    <string name="tempat_anak_detail">Tempat Anak </string>
+    <string name="tanggal_detail">Tanggal Lahir : </string>
+    <string name="tanggal_anak_detail">Tanggal Lahir Anak </string>
+    <string name="gender_detail">Jenis Kelamin : </string>
+    <string name="gender_anak_detail">Jenis Kelamin Anak </string>
+    <string name="berat_detail">Berat Badan : </string>
+    <string name="berat_anak_detail">Berat Badan Anak </string>
+    <string name="tinggi_detail">Tinggi Badan : </string>
+    <string name="tinggi_anak_detail">Tinggi Badan Anak </string>
+
 
     //String About
     <string name="about_title_bar">About Us</string>

@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/bg_color"
-    tools:context=".ui.profile.profileanak.AddProfileAnakActivity">
+    tools:context=".ui.profile.profileanak.adaprofileanak.AddProfileAnakActivity">
 
     <LinearLayout
         android:id="@+id/container_top_bar_title"
@@ -108,6 +108,46 @@
     </com.google.android.material.textfield.TextInputLayout>
 
     <TextView
+        android:id="@+id/date_birth_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="35dp"
+        android:layout_marginTop="24dp"
+        android:alpha="0"
+        android:text="@string/tanggal_anak"
+        android:fontFamily="@font/dm_sans_medium"
+        android:textColor="@color/black"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/place_anakEditTextLayout"
+        tools:alpha="100" />
+
+    <LinearLayout
+        android:id="@+id/date"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="6dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/date_birth_title"
+        android:gravity="center"
+        android:orientation="horizontal">
+        <TextView
+            android:id="@+id/date_birth_tv"
+            android:layout_width="285dp"
+            android:layout_height="wrap_content"
+            android:background="@drawable/rectangle_opsi"
+            app:layout_constraintStart_toStartOf="parent"
+            tools:alpha="100" />
+        <ImageButton
+            android:id="@+id/date_birth_button"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_marginStart="5dp"
+            android:layout_gravity="center_vertical"
+            android:src="@drawable/ic_calendar"
+            android:background="@null"/>
+    </LinearLayout>
+
+    <TextView
         android:id="@+id/gender_anak"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -118,28 +158,40 @@
         android:fontFamily="@font/dm_sans_medium"
         android:textColor="@color/black"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/place_anakEditTextLayout"
+        app:layout_constraintTop_toBottomOf="@id/date"
         tools:alpha="100" />
-
-    <com.google.android.material.textfield.TextInputLayout
-        android:id="@+id/container_dropdown"
-        android:layout_width="350dp"
+    <LinearLayout
+        android:id="@+id/container_opsi_gender"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:hint="@string/opsi_gender"
-        android:textColorHint="@color/color_transparant"
-        android:layout_gravity="center|top"
-        app:layout_constraintStart_toStartOf="@id/place_anakEditTextLayout"
+        android:layout_marginTop="6dp"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/gender_anak"
-        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.ExposedDropdownMenu"
-        tools:ignore="MissingConstraints">
+        android:orientation="vertical">
+        <RadioGroup
+            android:id="@+id/genderRadioGroup"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintStart_toStartOf="parent"
+            android:layout_marginStart="35dp"
+            android:layout_marginTop="8dp"
+            android:orientation="horizontal">
 
-        <AutoCompleteTextView
-            android:id="@+id/dropdown_gender_anak"
-            android:layout_width="340dp"
-            android:layout_height="50dp"
-            android:background="@drawable/rectangle_opsi"
-            android:inputType="none"/>
-    </com.google.android.material.textfield.TextInputLayout>
+            <RadioButton
+                android:id="@+id/radioButtonMale"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/male"
+                android:onClick="checkButton"/>
+
+            <RadioButton
+                android:id="@+id/radioButtonFemale"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="30dp"
+                android:text="@string/female" />
+        </RadioGroup>
+    </LinearLayout>
 
     <TextView
         android:id="@+id/berat_badan_anak_tv"
@@ -152,7 +204,7 @@
         android:fontFamily="@font/dm_sans_medium"
         android:textColor="@color/black"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/container_dropdown"
+        app:layout_constraintTop_toBottomOf="@id/container_opsi_gender"
         tools:alpha="100" />
 
     <com.google.android.material.textfield.TextInputLayout
@@ -219,7 +271,7 @@
         android:layout_height="45dp"
         android:layout_marginTop="50dp"
         android:backgroundTint="@color/color_saved"
-        android:text="@string/edit_profile_saved"
+        android:text="@string/add_profile_saved"
         android:alpha="0"
         tools:alpha="100"
         app:layout_constraintEnd_toEndOf="parent"

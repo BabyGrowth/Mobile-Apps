@@ -30,17 +30,10 @@ class MainActivity : AppCompatActivity() {
 
                 else ->{
 
-
-
                 }
-
             }
-
             true
-
         }
-
-
     }
 
     private fun replaceFragment(fragment : Fragment){
@@ -49,7 +42,5 @@ class MainActivity : AppCompatActivity() {
         val fragmentTransaction = fragmentManager.beginTransaction()
         fragmentTransaction.replace(R.id.frame_activity,fragment)
         fragmentTransaction.commit()
-
-
     }
 }

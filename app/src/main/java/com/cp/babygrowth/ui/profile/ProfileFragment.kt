@@ -9,6 +9,7 @@ import android.view.ViewGroup
 import com.cp.babygrowth.databinding.FragmentProfileBinding
 import com.cp.babygrowth.ui.about.AboutActivity
 import com.cp.babygrowth.ui.profile.editprofile.EditProfileActivity
+import com.cp.babygrowth.ui.profile.profileanak.ProfileAnakActivity
 
 class ProfileFragment : Fragment() {
 
@@ -30,7 +31,10 @@ class ProfileFragment : Fragment() {
             val editProfile = Intent(activity, EditProfileActivity::class.java)
             startActivity(editProfile)
         }
-
+        binding.containerOpsiProfileAnak.setOnClickListener {
+            val profileAnak = Intent(activity, ProfileAnakActivity::class.java)
+            startActivity(profileAnak)
+        }
         binding.containerOpsiInformasi.setOnClickListener {
             val aboutUs = Intent(activity, AboutActivity::class.java)
             startActivity(aboutUs)
