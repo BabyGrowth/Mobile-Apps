@@ -25,9 +25,8 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:src="@drawable/rectangle_authentication_top"
-        tools:ignore="MissingConstraints"
-        tools:layout_editor_absoluteX="0dp"
-        tools:layout_editor_absoluteY="-10dp" />
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="MissingConstraints" />
 
     <ImageView
         android:id="@+id/logo_signin"
@@ -89,12 +88,10 @@
             android:layout_height="wrap_content"
             android:layout_marginStart="30dp"
             android:layout_marginTop="24dp"
-            android:alpha="0"
             android:text="@string/email_user"
             android:textColor="@color/black"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="@id/signin"
-            tools:alpha="100" />
+            app:layout_constraintTop_toTopOf="@id/signin" />
 
         <com.google.android.material.textfield.TextInputLayout
             android:id="@+id/emailEditTextLayout"
@@ -103,14 +100,12 @@
             android:layout_height="wrap_content"
             android:layout_marginStart="32dp"
             android:layout_marginEnd="32dp"
-            android:alpha="0"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:errorContentDescription="@string/email_invalid"
             app:helperTextTextColor="@android:color/holo_blue_light"
             app:layout_constraintTop_toBottomOf="@+id/emailTextView"
-            app:startIconDrawable="@drawable/ic_email"
-            tools:alpha="100">
+            app:startIconDrawable="@drawable/ic_email">
 
             <com.cp.babygrowth.ui.authentication.costumview.EmailCustomView
                 android:id="@+id/emailEditText"
@@ -128,12 +123,10 @@
             android:layout_height="wrap_content"
             android:layout_marginStart="30dp"
             android:layout_marginTop="10dp"
-            android:alpha="0"
             android:text="@string/password_user"
             android:textColor="@color/black"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/emailEditTextLayout"
-            tools:alpha="100" />
+            app:layout_constraintTop_toBottomOf="@+id/emailEditTextLayout"/>
 
         <com.google.android.material.textfield.TextInputLayout
             android:id="@+id/passwordEditTextLayout"
@@ -148,11 +141,9 @@
             app:endIconMode="password_toggle"
             app:counterEnabled="true"
             app:counterMaxLength="16"
-            android:alpha="0"
             app:helperTextTextColor="@color/black"
             app:layout_constraintTop_toBottomOf="@id/passwordTextView"
-            app:startIconDrawable="@drawable/ic_lock"
-            tools:alpha="100">
+            app:startIconDrawable="@drawable/ic_lock">
 
             <com.cp.babygrowth.ui.authentication.costumview.PasswordCustomView
                 android:id="@+id/passwordEditText"
@@ -172,8 +163,6 @@
         android:layout_marginTop="20dp"
         android:backgroundTint="@color/color_btn_signin"
         android:text="@string/signin_btn"
-        android:alpha="0"
-        tools:alpha="100"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/signin" />
@@ -218,7 +207,6 @@
         android:layout_width="200dp"
         android:layout_height="50dp"
         android:layout_marginTop="316dp"
-        android:alpha="0"
         android:backgroundTint="@color/white"
         android:drawableLeft="@drawable/google"
         android:text="@string/google_btn"
@@ -227,38 +215,42 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.497"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/signin_title"
-        tools:alpha="100" />
+        app:layout_constraintTop_toBottomOf="@id/signin_title"/>
 
-    <TextView
-        android:id="@+id/dont_question"
+    <LinearLayout
+        android:id="@+id/container_signup"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Don't have an account ?"
-        android:layout_gravity="center"
-        android:layout_weight="0.5"
-        android:textSize="12sp"
-        android:fontFamily="@font/dm_sans_light"
-        android:textColor="@color/black"
-        app:layout_constraintTop_toBottomOf="@id/container_pemisah"
-        app:layout_constraintStart_toStartOf="parent"
-        android:layout_marginTop="70dp"
-        android:layout_marginStart="105dp"
-        tools:ignore="DuplicateIds,MissingConstraints" />
+        android:orientation="horizontal"
+        app:layout_constraintTop_toBottomOf="@id/google_btn"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
+        <TextView
+            android:id="@+id/dont_question"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Don't have an account ?"
+            android:layout_gravity="center"
+            android:textSize="12sp"
+            android:fontFamily="@font/dm_sans_light"
+            android:textColor="@color/black"
+            app:layout_constraintTop_toBottomOf="@id/container_pemisah"
+            app:layout_constraintStart_toStartOf="parent"
+            tools:ignore="DuplicateIds,MissingConstraints" />
 
-    <TextView
-        android:id="@+id/btn_to_signup"
-        android:layout_width="wrap_content"
-        android:layout_height="50dp"
-        android:text="@string/signup_btn"
-        android:layout_gravity="center"
-        android:layout_weight="0.5"
-        android:textSize="12sp"
-        android:fontFamily="@font/dm_sans_bold"
-        android:textColor="@color/black"
-        app:layout_constraintTop_toBottomOf="@id/container_pemisah"
-        app:layout_constraintStart_toStartOf="parent"
-        android:layout_marginTop="70dp"
-        android:layout_marginStart="253dp"
-        tools:ignore="DuplicateIds,MissingConstraints" />
+        <TextView
+            android:id="@+id/btn_to_signup"
+            android:layout_width="wrap_content"
+            android:layout_height="50dp"
+            android:text="@string/signup_btn"
+            android:layout_gravity="center"
+            android:textSize="12sp"
+            android:fontFamily="@font/dm_sans_bold"
+            android:textColor="@color/black"
+            app:layout_constraintTop_toBottomOf="@id/container_pemisah"
+            app:layout_constraintStart_toStartOf="parent"
+            android:layout_marginStart="15dp"
+            android:gravity="center"
+            tools:ignore="DuplicateIds,MissingConstraints" />
+    </LinearLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>

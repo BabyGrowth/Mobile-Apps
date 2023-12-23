@@ -25,10 +25,9 @@ class SignupActivity : AppCompatActivity() {
             val email = binding.emailEditText.text.toString()
             val password = binding.passwordEditText.text.toString()
 
-            binding.progressBar.visibility = View.VISIBLE
+            binding.progressBar.visibility = View.GONE
 
             authManager.signUpWithEmailAndPassword(name, email, password) { success, message ->
-                binding.progressBar.visibility = View.GONE
 
                 if (success) {
                     Toast.makeText(this, "Signup Berhasil, Silahkan Login", Toast.LENGTH_SHORT).show()

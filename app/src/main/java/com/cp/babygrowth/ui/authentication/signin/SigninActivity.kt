@@ -19,33 +19,35 @@ class SigninActivity : AppCompatActivity() {
         binding = ActivitySigninBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
+        binding.progressBar.visibility = View.GONE
+
         authManager = FirebaseAuthentication(this)
 
         binding.signinBtn.setOnClickListener {
             val email = binding.emailEditText.text.toString()
             val password = binding.passwordEditText.text.toString()
 
-            binding.progressBar.visibility = View.VISIBLE
-
             authManager.signInWithEmailAndPassword(email, password) { success, message ->
-                binding.progressBar.visibility = View.GONE
+                    if (success) {
+                        Toast.makeText(this, "Signin Berhasil", Toast.LENGTH_SHORT).show()
+                        startActivity(Intent(this, MainActivity::class.java))
+                        finish()
+                    } else {
+                        Toast.makeText(
+                            this,
+                            "Signin Gagal, Silahkan cek kembali",
+                            Toast.LENGTH_SHORT
+                        ).show()
 
-                if (success) {
-                    Toast.makeText(this, "Signin Berhasil", Toast.LENGTH_SHORT).show()
-                    startActivity(Intent(this, MainActivity::class.java))
-                    finish()
-                } else {
-                    Toast.makeText(this, "Signin Gagal, Silahkan cek kembali", Toast.LENGTH_SHORT).show()
-
-                    binding.emailEditText.text = null
-                    binding.passwordEditText.text = null
+                        binding.emailEditText.text = null
+                        binding.passwordEditText.text = null
+                    }
                 }
             }
-        }
 
-        binding.btnToSignup.setOnClickListener {
-            val intent = Intent(this, SignupActivity::class.java)
-            startActivity(intent)
+            binding.btnToSignup.setOnClickListener {
+                val intent = Intent(this, SignupActivity::class.java)
+                startActivity(intent)
+            }
         }
     }
-}
