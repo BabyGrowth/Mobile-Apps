@@ -31,7 +31,7 @@
             android:name=".ui.about.AboutActivity"
             android:exported="false" />
         <activity
-            android:name=".ui.profile.profileanak.adaprofileanak.AddProfileAnakActivity"
+            android:name=".ui.profile.profileanak.addprofileanak.AddProfileAnakActivity"
             android:exported="false" />
         <activity
             android:name=".ui.profile.profileanak.ProfileAnakActivity"

@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "930866818688",
+    "project_id": "babygrowth-cp434",
+    "storage_bucket": "babygrowth-cp434.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:930866818688:android:5fa0814985cd9977d88065",
+        "android_client_info": {
+          "package_name": "com.cp.babygrowth"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCpnB2n_-7He0OMZqZs-EMvt_WcZyR7D1A"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

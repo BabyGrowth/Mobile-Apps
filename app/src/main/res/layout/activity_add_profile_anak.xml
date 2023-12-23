@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/bg_color"
-    tools:context=".ui.profile.profileanak.adaprofileanak.AddProfileAnakActivity">
+    tools:context=".ui.profile.profileanak.addprofileanak.AddProfileAnakActivity">
 
     <LinearLayout
         android:id="@+id/container_top_bar_title"
@@ -257,7 +257,7 @@
             </com.google.android.material.textfield.TextInputLayout>
 
             <Button
-                android:id="@+id/saved_btn"
+                android:id="@+id/add_btn"
                 android:layout_width="130dp"
                 android:layout_height="50dp"
                 android:layout_marginTop="50dp"

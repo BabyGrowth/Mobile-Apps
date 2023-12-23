@@ -7,6 +7,7 @@ import android.os.Bundle
 import android.util.Log
 import android.widget.Toast
 import androidx.activity.result.contract.ActivityResultContracts
+import androidx.core.app.ActivityCompat
 import androidx.core.content.ContextCompat
 import androidx.fragment.app.Fragment
 import com.cp.babygrowth.R
@@ -34,13 +35,7 @@ class MainActivity : AppCompatActivity() {
                 R.id.profile -> replaceFragment(ProfileFragment())
                 R.id.meal_plan -> replaceFragment(MealFragment())
 
-                R.id.fab_scan ->
-                    if (allPermissionsGranted()) {
-                        Log.e("MainActivity", "Launching camera intent")
-                        launcherIntentCamera.launch(null)
-                    } else {
-                        requestPermissionLauncher.launch(REQUIRED_PERMISSION)
-                    }
+                R.id.fab_scan -> checkCameraPermission()
 
                 else ->{
 
@@ -49,8 +44,9 @@ class MainActivity : AppCompatActivity() {
             true
         }
 
-        if (!allPermissionsGranted()) {
-            requestPermissionLauncher.launch(REQUIRED_PERMISSION)
+        val fragmentToLoad = intent.getIntExtra("fragmentToLoad", -1)
+        if (fragmentToLoad ==  R.id.profile) {
+            replaceFragment(ProfileFragment())
         }
     }
 
@@ -62,31 +58,55 @@ class MainActivity : AppCompatActivity() {
         fragmentTransaction.commit()
     }
 
-    private val requestPermissionLauncher =
-        registerForActivityResult(
-            ActivityResultContracts.RequestPermission()
-        ) { isGranted: Boolean ->
-            if (isGranted) {
-                Toast.makeText(this, "Permission request granted", Toast.LENGTH_LONG).show()
-            } else {
-                Toast.makeText(this, "Permission request denied", Toast.LENGTH_LONG).show()
-            }
+    private fun checkCameraPermission() {
+        if (ContextCompat.checkSelfPermission(
+                this,
+                Manifest.permission.CAMERA
+            ) != PackageManager.PERMISSION_GRANTED
+        ) {
+            ActivityCompat.requestPermissions(
+                this,
+                arrayOf(Manifest.permission.CAMERA),
+                CAMERA_PERMISSION_CODE
+            )
+        } else {
+            Log.e("MainActivity", "Launching camera intent")
+            launcherIntentCamera.launch(null)
         }
-
-    private fun allPermissionsGranted() =
-        ContextCompat.checkSelfPermission(
-            this,
-            REQUIRED_PERMISSION
-        ) == PackageManager.PERMISSION_GRANTED
+    }
 
     private val launcherIntentCamera = registerForActivityResult(
         ActivityResultContracts.TakePicture()
     ) { isSuccess ->
         if (isSuccess) {
+            // Handle success, misalnya tampilkan gambar yang diambil dari kamera
+        } else {
+            // Handle failure atau pemberitahuan jika pengguna membatalkan pengambilan gambar
+        }
+    }
+
+    override fun onRequestPermissionsResult(
+        requestCode: Int,
+        permissions: Array<out String>,
+        grantResults: IntArray
+    ) {
+        super.onRequestPermissionsResult(requestCode, permissions, grantResults)
+        if (requestCode == CAMERA_PERMISSION_CODE) {
+            if (grantResults.isNotEmpty() && grantResults[0] == PackageManager.PERMISSION_GRANTED) {
+                Log.e("MainActivity", "Camera permission granted")
+                launcherIntentCamera.launch(null)
+            } else {
+                Log.e("MainActivity", "Camera permission denied")
+                Toast.makeText(
+                    this,
+                    "Camera permission is required to use this feature",
+                    Toast.LENGTH_SHORT
+                ).show()
+            }
         }
     }
 
     companion object {
-        private const val REQUIRED_PERMISSION = Manifest.permission.CAMERA
+        private const val CAMERA_PERMISSION_CODE = 100
     }
 }

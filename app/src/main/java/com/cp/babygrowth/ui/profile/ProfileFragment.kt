@@ -6,6 +6,7 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import com.cp.babygrowth.R
 import com.cp.babygrowth.databinding.FragmentProfileBinding
 import com.cp.babygrowth.ui.about.AboutActivity
 import com.cp.babygrowth.ui.profile.editprofile.EditProfileActivity

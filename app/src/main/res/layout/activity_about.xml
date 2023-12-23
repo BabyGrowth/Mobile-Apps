@@ -30,7 +30,7 @@
             android:layout_height="wrap_content"
             android:text="@string/about_title_bar"
             android:textColor="@color/black"
-            android:textSize="24dp"
+            android:textSize="17sp"
             android:layout_marginStart="30dp"
             android:fontFamily="@font/dm_sans_bold"
             android:layout_gravity="center"/>
@@ -59,17 +59,18 @@
 
                 <TextView
                     android:id="@+id/selamat_datang_txt"
-                    android:layout_width="130dp"
+                    android:layout_width="110dp"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="70dp"
+                    android:layout_marginStart="5dp"
                     android:fontFamily="@font/dm_sans_bold"
                     android:text="@string/selamat_datang_txt"
                     android:textColor="@color/black"
-                    android:textSize="22dp" />
+                    android:textSize="17sp" />
                 <ImageView
                     android:id="@+id/logo_about"
-                    android:layout_width="175dp"
-                    android:layout_height="175dp"
+                    android:layout_width="155dp"
+                    android:layout_height="155dp"
                     android:layout_marginStart="10dp"
                     android:src="@drawable/logo_about"
                     tools:ignore="MissingConstraints" />
@@ -92,8 +93,7 @@
                     android:text="@string/about_us_title"
                     android:layout_marginStart="30dp"
                     android:layout_marginTop="70dp"
-                    android:textColor="@color/black"
-                    android:textSize="17dp" />
+                    android:textColor="@color/black"/>
                 <TextView
                     android:id="@+id/tentang_kami_content"
                     android:layout_width="wrap_content"
@@ -103,8 +103,7 @@
                     android:layout_marginStart="30dp"
                     android:layout_marginTop="10dp"
                     android:layout_marginEnd="30dp"
-                    android:textColor="@color/black"
-                    android:textSize="17dp" />
+                    android:textColor="@color/black" />
 
                 <TextView
                     android:id="@+id/misi_kami_txt"
@@ -114,8 +113,7 @@
                     android:text="@string/misi_title"
                     android:layout_marginTop="30dp"
                     android:layout_marginStart="30dp"
-                    android:textColor="@color/black"
-                    android:textSize="17dp" />
+                    android:textColor="@color/black" />
                 <TextView
                     android:id="@+id/misi_kami_content"
                     android:layout_width="wrap_content"
@@ -125,8 +123,7 @@
                     android:layout_marginStart="30dp"
                     android:layout_marginTop="10dp"
                     android:layout_marginEnd="30dp"
-                    android:textColor="@color/black"
-                    android:textSize="17dp" />
+                    android:textColor="@color/black" />
 
                 <TextView
                     android:id="@+id/penawaran_txt"
@@ -136,8 +133,7 @@
                     android:text="@string/penawaran_title"
                     android:layout_marginTop="30dp"
                     android:layout_marginStart="30dp"
-                    android:textColor="@color/black"
-                    android:textSize="17dp" />
+                    android:textColor="@color/black"/>
 
                 <LinearLayout
                     android:id="@+id/container_content_one"
@@ -154,8 +150,7 @@
                         android:layout_marginStart="30dp"
                         android:layout_marginTop="10dp"
                         android:layout_marginEnd="30dp"
-                        android:textColor="@color/black"
-                        android:textSize="17dp" />
+                        android:textColor="@color/black" />
                     <androidx.constraintlayout.widget.ConstraintLayout
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content">
@@ -169,7 +164,6 @@
                             android:layout_marginTop="10dp"
                             android:layout_marginEnd="30dp"
                             android:textColor="@color/black"
-                            android:textSize="17dp"
                             app:layout_constraintStart_toStartOf="parent"
                             app:layout_constraintTop_toTopOf="parent" />
 
@@ -181,7 +175,6 @@
                             android:text="@string/content_panduan_txt"
                             android:layout_marginEnd="30dp"
                             android:textColor="@color/black"
-                            android:textSize="17dp"
                             app:layout_constrainedWidth="true"
                             app:layout_constraintStart_toEndOf="@id/penawaran_one_title"
                             app:layout_constraintEnd_toEndOf="parent"
@@ -204,8 +197,7 @@
                         android:layout_marginStart="30dp"
                         android:layout_marginTop="10dp"
                         android:layout_marginEnd="30dp"
-                        android:textColor="@color/black"
-                        android:textSize="17dp" />
+                        android:textColor="@color/black" />
                     <androidx.constraintlayout.widget.ConstraintLayout
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content">
@@ -219,7 +211,6 @@
                             android:layout_marginTop="10dp"
                             android:layout_marginEnd="30dp"
                             android:textColor="@color/black"
-                            android:textSize="17dp"
                             app:layout_constraintStart_toStartOf="parent"
                             app:layout_constraintTop_toTopOf="parent" />
 
@@ -231,7 +222,6 @@
                             android:text="@string/content_plan_txt"
                             android:layout_marginEnd="30dp"
                             android:textColor="@color/black"
-                            android:textSize="17dp"
                             app:layout_constrainedWidth="true"
                             app:layout_constraintStart_toEndOf="@id/penawaran_two_title"
                             app:layout_constraintEnd_toEndOf="parent"
@@ -255,8 +245,7 @@
                         android:layout_marginStart="30dp"
                         android:layout_marginTop="10dp"
                         android:layout_marginEnd="30dp"
-                        android:textColor="@color/black"
-                        android:textSize="17dp" />
+                        android:textColor="@color/black" />
                     <androidx.constraintlayout.widget.ConstraintLayout
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content">
@@ -270,7 +259,6 @@
                             android:layout_marginTop="10dp"
                             android:layout_marginEnd="30dp"
                             android:textColor="@color/black"
-                            android:textSize="17dp"
                             app:layout_constraintStart_toStartOf="parent"
                             app:layout_constraintTop_toTopOf="parent" />
 
@@ -282,7 +270,6 @@
                             android:text="@string/content_deteksi_txt"
                             android:layout_marginEnd="30dp"
                             android:textColor="@color/black"
-                            android:textSize="17dp"
                             app:layout_constrainedWidth="true"
                             app:layout_constraintStart_toEndOf="@id/penawaran_three_title"
                             app:layout_constraintEnd_toEndOf="parent"
@@ -296,11 +283,9 @@
                     android:fontFamily="@font/dm_sans_light"
                     android:text="@string/content_close_txt"
                     android:layout_marginStart="30dp"
-                    android:layout_marginTop="20dp"
                     android:layout_marginEnd="30dp"
                     android:layout_marginBottom="30dp"
-                    android:textColor="@color/black"
-                    android:textSize="17dp" />
+                    android:textColor="@color/black" />
             </LinearLayout>
         </LinearLayout>
     </ScrollView>
