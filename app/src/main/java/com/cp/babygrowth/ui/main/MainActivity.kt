@@ -44,8 +44,18 @@ class MainActivity : AppCompatActivity() {
             true
         }
 
-        val fragmentToLoad = intent.getIntExtra("fragmentToLoad", -1)
-        if (fragmentToLoad ==  R.id.profile) {
+        val paToLoad = intent.getIntExtra("paToLoad", -1)
+        if (paToLoad ==  R.id.profile) {
+            replaceFragment(ProfileFragment())
+        }
+
+        val epToLoad = intent.getIntExtra("epToLoad", -1)
+        if (epToLoad ==  R.id.profile) {
+            replaceFragment(ProfileFragment())
+        }
+
+        val auToLoad = intent.getIntExtra("auToLoad", -1)
+        if (auToLoad ==  R.id.profile) {
             replaceFragment(ProfileFragment())
         }
     }

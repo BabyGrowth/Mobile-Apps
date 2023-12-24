@@ -1,13 +1,12 @@
 package com.cp.babygrowth.ui.splash
 
-import android.content.Context
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.os.Handler
 import android.os.Looper
 import com.cp.babygrowth.R
-import com.cp.babygrowth.ui.authentication.FirebaseAuthentication
+import com.cp.babygrowth.data.FirebaseAuthentication
 import com.cp.babygrowth.ui.authentication.signin.SigninActivity
 import com.cp.babygrowth.ui.main.MainActivity
 

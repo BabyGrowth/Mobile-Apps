@@ -18,7 +18,7 @@ class AboutActivity : AppCompatActivity() {
         binding.backHome.setOnClickListener {
             val intent = Intent(this, MainActivity::class.java)
             intent.flags = Intent.FLAG_ACTIVITY_CLEAR_TOP or Intent.FLAG_ACTIVITY_SINGLE_TOP
-            intent.putExtra("fragmentToLoad", R.id.profile) // Sinyal untuk fragment yang ingin ditampilkan
+            intent.putExtra("auToLoad", R.id.profile) // Sinyal untuk fragment yang ingin ditampilkan
             startActivity(intent)
             finish()
         }

@@ -12,7 +12,20 @@
           "package_name": "com.cp.babygrowth"
         }
       },
-      "oauth_client": [],
+      "oauth_client": [
+        {
+          "client_id": "930866818688-1kfn47bc53i4962rcr3eot9ao1fdignb.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.cp.babygrowth",
+            "certificate_hash": "62fee885fa14bc20ba527883e9bf15151a7cc9d4"
+          }
+        },
+        {
+          "client_id": "930866818688-8sg6av9sk2jqca7g6uh5o774gj3j16rq.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
       "api_key": [
         {
           "current_key": "AIzaSyCpnB2n_-7He0OMZqZs-EMvt_WcZyR7D1A"
@@ -20,7 +33,12 @@
       ],
       "services": {
         "appinvite_service": {
-          "other_platform_oauth_client": []
+          "other_platform_oauth_client": [
+            {
+              "client_id": "930866818688-8sg6av9sk2jqca7g6uh5o774gj3j16rq.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
         }
       }
     }

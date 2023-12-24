@@ -1,6 +1,8 @@
 <resources>
     <string name="app_name">BabyGrowth+</string>
 
+    <string name="web_ID_Google">930866818688-8sg6av9sk2jqca7g6uh5o774gj3j16rq.apps.googleusercontent.com</string>
+
     <string name="signin_title">SIGN IN</string>
     <string name="signup_title">SIGN UP</string>
     <string name="profile_title">Profile</string>

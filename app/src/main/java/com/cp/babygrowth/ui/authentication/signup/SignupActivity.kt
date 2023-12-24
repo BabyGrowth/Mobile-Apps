@@ -6,7 +6,7 @@ import android.os.Bundle
 import android.view.View
 import android.widget.Toast
 import com.cp.babygrowth.databinding.ActivitySignupBinding
-import com.cp.babygrowth.ui.authentication.FirebaseAuthentication
+import com.cp.babygrowth.data.FirebaseAuthentication
 import com.cp.babygrowth.ui.authentication.signin.SigninActivity
 
 class SignupActivity : AppCompatActivity() {
